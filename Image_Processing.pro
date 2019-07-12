@@ -31,3 +31,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     imageprocessor.h
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets

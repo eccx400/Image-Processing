@@ -1,3 +1,4 @@
+
 #ifndef IMAGEPROCESSOR_H
 #define IMAGEPROCESSOR_H
 #include <QObject>
@@ -6,13 +7,13 @@
 class ImageProcessorPrivate;
 class ImageProcessor : public QObject
 {
-  Q_OBJECT
-  Q_ENUMS(ImageAlgorithm)
-  Q_PROPERTY(QString sourceFile READ sourceFile)
-  Q_PROPERTY(ImageAlgorithm algorithm READ algorithm)
+    Q_OBJECT
+    Q_ENUMS(ImageAlgorithm)
+    Q_PROPERTY(QString sourceFile READ sourceFile)
+    Q_PROPERTY(ImageAlgorithm algorithm READ algorithm)
 
-  public:
-    ImageProcessor(QObject * parent = nullptr);
+public:
+    ImageProcessor(QObject *parent = 0);
     ~ImageProcessor();
 
     enum ImageAlgorithm{
@@ -41,4 +42,4 @@ private:
     ImageProcessorPrivate *m_d;
 };
 
-#endif // IMAGEPROCESSOR_H
+#endif
